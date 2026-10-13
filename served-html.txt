@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education Hub by GUNJAN GAUR - Free Programming & Science Courses</title>
+    <meta name="description" content="Learn from Education Hub by GUNJAN GAUR. Get free courses on C Programming, C++, Logical Organization, Digital Marketing, Computer Basics, MS Office, and Science. Watch full high-quality video tutorials on our YouTube channel." />
+    <meta name="keywords" content="Education Hub by GUNJAN GAUR, Gunjan Gaur, Gunjan Gaur YouTube, free programming courses, learn C programming, learn C++, Logical organization computer, Computer basics, MS Office course, Science course, digital marketing tutorials online, best computer courses by Gunjan Gaur, programming for beginners, Education Hub videos" />
+    <meta name="author" content="Education Hub by GUNJAN GAUR" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+

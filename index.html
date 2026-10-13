@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Fix for "Cannot set property fetch of #<Window> which has only a getter"
+      try {
+        var desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+        if (desc && !desc.set && desc.configurable) {
+          var originalFetch = desc.get ? desc.get.call(window) : desc.value;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() { return originalFetch; },
+            set: function(val) {
+              Object.defineProperty(window, 'fetch', {
+                value: val,
+                writable: true,
+                configurable: true,
+                enumerable: true
+              });
+            }
+          });
+        }
+      } catch (e) {
+        console.error("fetch polyfill error:", e);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education Hub by Gunjan Gaur</title>
+    <meta name="description" content="Learn from Education Hub by GUNJAN GAUR. Get free courses on C Programming, C++, Logical Organization, Digital Marketing, Computer Basics, MS Office, and Science. Watch full high-quality video tutorials on our YouTube channel." />
+    <meta name="keywords" content="Education Hub by GUNJAN GAUR, Gunjan Gaur, Gunjan Gaur YouTube, free programming courses, learn C programming, learn C++, Logical organization computer, Computer basics, MS Office course, Science course, digital marketing tutorials online, best computer courses by Gunjan Gaur, programming for beginners, Education Hub videos" />
+    <meta name="author" content="Education Hub by GUNJAN GAUR" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is Logical Organization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In computer science, logical organization refers to how data, memory, or systems are structured from a user's or programmer's perspective, completely independent of their actual physical location on hardware. It acts as an abstract conceptual layer that allows humans and software applications to interact with complex hardware seamlessly."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is Number System?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A number system is a systematic way of representing quantities and values using a defined set of symbols or digits. In mathematics and computer science, it establishes a mathematical framework where the value of any digit is determined by its position, its base, and its symbol."
+        }
+      }]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
